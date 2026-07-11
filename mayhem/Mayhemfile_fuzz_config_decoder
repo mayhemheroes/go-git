@@ -1,0 +1,9 @@
+# config FuzzDecoder (plumbing/format/config) — git config text
+project: go-git
+target: fuzz_config_decoder
+cmds:
+  - cmd: /mayhem/fuzz_config_decoder
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_config_decoder/testsuite

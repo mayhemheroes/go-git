@@ -1,0 +1,9 @@
+# packfile FuzzParser (plumbing/format/packfile) — full packfile parse
+project: go-git
+target: fuzz_packfile_parser
+cmds:
+  - cmd: /mayhem/fuzz_packfile_parser
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_packfile_parser/testsuite

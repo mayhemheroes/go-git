@@ -1,0 +1,9 @@
+# index FuzzDecoder (plumbing/format/index) — git index (DIRC) decode
+project: go-git
+target: fuzz_index_decoder
+cmds:
+  - cmd: /mayhem/fuzz_index_decoder
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_index_decoder/testsuite

@@ -1,0 +1,9 @@
+# object FuzzCommitDecode (plumbing/object) — loose commit object decode
+project: go-git
+target: fuzz_object_commit
+cmds:
+  - cmd: /mayhem/fuzz_object_commit
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_object_commit/testsuite

@@ -1,0 +1,9 @@
+# packfile FuzzScanner (plumbing/format/packfile) — packfile object scan
+project: go-git
+target: fuzz_packfile_scanner
+cmds:
+  - cmd: /mayhem/fuzz_packfile_scanner
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_packfile_scanner/testsuite
